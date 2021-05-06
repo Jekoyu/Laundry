@@ -23,27 +23,52 @@ Partial Class Dashboard
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.Label1 = New System.Windows.Forms.Label()
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.LblNama = New System.Windows.Forms.Label()
         Me.SuspendLayout()
         '
         'Label1
         '
         Me.Label1.AutoSize = True
         Me.Label1.ForeColor = System.Drawing.Color.White
-        Me.Label1.Location = New System.Drawing.Point(374, 267)
+        Me.Label1.Location = New System.Drawing.Point(1122, 924)
+        Me.Label1.Margin = New System.Windows.Forms.Padding(9, 0, 9, 0)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(62, 13)
+        Me.Label1.Size = New System.Drawing.Size(178, 46)
         Me.Label1.TabIndex = 0
         Me.Label1.Text = "WELCOME"
         '
+        'Label2
+        '
+        Me.Label2.AutoSize = True
+        Me.Label2.Location = New System.Drawing.Point(293, 256)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(178, 46)
+        Me.Label2.TabIndex = 1
+        Me.Label2.Text = "WELCOME"
+        '
+        'LblNama
+        '
+        Me.LblNama.AutoSize = True
+        Me.LblNama.Location = New System.Drawing.Point(462, 256)
+        Me.LblNama.Name = "LblNama"
+        Me.LblNama.Size = New System.Drawing.Size(75, 46)
+        Me.LblNama.TabIndex = 2
+        Me.LblNama.Text = "ADI"
+        '
         'Dashboard
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(18.0!, 45.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(44, Byte), Integer), CType(CType(62, Byte), Integer), CType(CType(80, Byte), Integer))
         Me.ClientSize = New System.Drawing.Size(900, 670)
+        Me.Controls.Add(Me.LblNama)
+        Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
+        Me.Font = New System.Drawing.Font("Segoe UI", 25.0!)
         Me.ForeColor = System.Drawing.Color.White
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
+        Me.Margin = New System.Windows.Forms.Padding(9, 10, 9, 10)
         Me.Name = "Dashboard"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.WindowsDefaultBounds
         Me.Text = "Dashboard"
@@ -53,4 +78,6 @@ Partial Class Dashboard
     End Sub
 
     Friend WithEvents Label1 As Label
+    Friend WithEvents Label2 As Label
+    Friend WithEvents LblNama As Label
 End Class

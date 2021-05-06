@@ -10,16 +10,28 @@
         TbPassword.Text = "Password"
     End Sub
     Sub Login()
+
         q = "select * from tb_user where username ='" & TbUsername.Text & "' and password = '" & TbPassword.Text & "' "
         Cari(q)
-
+        role = dr.Item("role")
         If dr.HasRows Then
 
+
+            If role = 1 Then
+                Master.Admin()
+            ElseIf role = "2" Then
+                Master.Kasir()
+            Else
+                Master.Pemilik()
+            End If
             Form1.Visible = False
             Master.Show()
+            Dashboard.LblNama.Text = dr.Item("nama")
+
+
         Else
-            MsgBox("Username/Email dan password Yang Anda Masukkan Salah")
-        End If
+                MsgBox("Username/Email dan password Yang Anda Masukkan Salah")
+            End If
     End Sub
 
     Private Sub Login_Load(sender As Object, e As EventArgs) Handles MyBase.Load
@@ -68,4 +80,10 @@
             TbPassword.Text = "Password"
         End If
     End Sub
+
+    Private Sub TbPassword_TextChanged(sender As Object, e As EventArgs) Handles TbPassword.TextChanged
+
+    End Sub
+
+
 End Class

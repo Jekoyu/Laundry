@@ -7,6 +7,7 @@ Module All
     Public ds As DataSet
     Public conn As SqlConnection
     Public q As String
+    Public role As String
 
     Public Sub koneksi()
         Try

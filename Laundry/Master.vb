@@ -5,8 +5,19 @@
         PnlContent.Controls.Add(p)
         p.Show()
     End Sub
+    Sub Admin()
+        BtnManageUser.Visible = True
 
+    End Sub
+    Sub Kasir()
+        BtnManageBarang.Visible = True
+    End Sub
+    Sub Pemilik()
+        BtnBelanja.Visible = True
+    End Sub
     Private Sub Master_Load(sender As Object, e As EventArgs) Handles Me.Load
         SwitchPanel(Dashboard)
     End Sub
+
+
 End Class
