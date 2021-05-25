@@ -37,8 +37,11 @@ Partial Class Master
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.PnlContent = New System.Windows.Forms.Panel()
+        Me.Button1 = New System.Windows.Forms.Button()
+        Me.Button2 = New System.Windows.Forms.Button()
         Me.Panel1.SuspendLayout()
         Me.Panel3.SuspendLayout()
+        Me.Panel2.SuspendLayout()
         Me.SuspendLayout()
         '
         'Panel1
@@ -162,7 +165,7 @@ Partial Class Master
         Me.BtnLaporan.Name = "BtnLaporan"
         Me.BtnLaporan.Size = New System.Drawing.Size(200, 52)
         Me.BtnLaporan.TabIndex = 17
-        Me.BtnLaporan.Text = "Laporan"
+        Me.BtnLaporan.Text = "Manage User"
         Me.BtnLaporan.UseVisualStyleBackColor = True
         Me.BtnLaporan.Visible = False
         '
@@ -177,7 +180,7 @@ Partial Class Master
         Me.BtnManageBarang.Name = "BtnManageBarang"
         Me.BtnManageBarang.Size = New System.Drawing.Size(200, 52)
         Me.BtnManageBarang.TabIndex = 16
-        Me.BtnManageBarang.Text = "Manage Barang"
+        Me.BtnManageBarang.Text = "Manage Produk/Paket"
         Me.BtnManageBarang.UseVisualStyleBackColor = True
         Me.BtnManageBarang.Visible = False
         '
@@ -192,7 +195,7 @@ Partial Class Master
         Me.BtnManageUser.Name = "BtnManageUser"
         Me.BtnManageUser.Size = New System.Drawing.Size(200, 52)
         Me.BtnManageUser.TabIndex = 15
-        Me.BtnManageUser.Text = "Manage User"
+        Me.BtnManageUser.Text = "Manage Outlet"
         Me.BtnManageUser.UseVisualStyleBackColor = True
         Me.BtnManageUser.Visible = False
         '
@@ -234,6 +237,8 @@ Partial Class Master
         'Panel2
         '
         Me.Panel2.BackColor = System.Drawing.Color.FromArgb(CType(CType(52, Byte), Integer), CType(CType(73, Byte), Integer), CType(CType(94, Byte), Integer))
+        Me.Panel2.Controls.Add(Me.Button2)
+        Me.Panel2.Controls.Add(Me.Button1)
         Me.Panel2.Dock = System.Windows.Forms.DockStyle.Top
         Me.Panel2.Location = New System.Drawing.Point(200, 0)
         Me.Panel2.Name = "Panel2"
@@ -244,10 +249,37 @@ Partial Class Master
         '
         Me.PnlContent.BackColor = System.Drawing.Color.FromArgb(CType(CType(44, Byte), Integer), CType(CType(62, Byte), Integer), CType(CType(80, Byte), Integer))
         Me.PnlContent.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.PnlContent.ForeColor = System.Drawing.Color.FromArgb(CType(CType(44, Byte), Integer), CType(CType(62, Byte), Integer), CType(CType(80, Byte), Integer))
         Me.PnlContent.Location = New System.Drawing.Point(200, 30)
         Me.PnlContent.Name = "PnlContent"
         Me.PnlContent.Size = New System.Drawing.Size(900, 670)
         Me.PnlContent.TabIndex = 2
+        '
+        'Button1
+        '
+        Me.Button1.Dock = System.Windows.Forms.DockStyle.Right
+        Me.Button1.FlatAppearance.BorderSize = 0
+        Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button1.ForeColor = System.Drawing.Color.White
+        Me.Button1.Location = New System.Drawing.Point(856, 0)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(44, 30)
+        Me.Button1.TabIndex = 0
+        Me.Button1.Text = "X"
+        Me.Button1.UseVisualStyleBackColor = True
+        '
+        'Button2
+        '
+        Me.Button2.Dock = System.Windows.Forms.DockStyle.Right
+        Me.Button2.FlatAppearance.BorderSize = 0
+        Me.Button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Button2.ForeColor = System.Drawing.Color.White
+        Me.Button2.Location = New System.Drawing.Point(812, 0)
+        Me.Button2.Name = "Button2"
+        Me.Button2.Size = New System.Drawing.Size(44, 30)
+        Me.Button2.TabIndex = 1
+        Me.Button2.Text = "_"
+        Me.Button2.UseVisualStyleBackColor = True
         '
         'Master
         '
@@ -265,6 +297,7 @@ Partial Class Master
         Me.Panel1.ResumeLayout(False)
         Me.Panel3.ResumeLayout(False)
         Me.Panel3.PerformLayout()
+        Me.Panel2.ResumeLayout(False)
         Me.ResumeLayout(False)
 
     End Sub
@@ -284,4 +317,6 @@ Partial Class Master
     Friend WithEvents BtnHome As Button
     Friend WithEvents Panel3 As Panel
     Friend WithEvents Label1 As Label
+    Friend WithEvents Button1 As Button
+    Friend WithEvents Button2 As Button
 End Class

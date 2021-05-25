@@ -13,10 +13,9 @@
 
         q = "select * from tb_user where username ='" & TbUsername.Text & "' and password = '" & TbPassword.Text & "' "
         Cari(q)
-        role = dr.Item("role")
+
         If dr.HasRows Then
-
-
+            role = dr.Item("role")
             If role = 1 Then
                 Master.Admin()
             ElseIf role = "2" Then
@@ -27,11 +26,10 @@
             Form1.Visible = False
             Master.Show()
             Dashboard.LblNama.Text = dr.Item("nama")
-
-
         Else
-                MsgBox("Username/Email dan password Yang Anda Masukkan Salah")
-            End If
+            MsgBox("Username/Email dan password Yang Anda Masukkan Salah")
+            Kosongkan()
+        End If
     End Sub
 
     Private Sub Login_Load(sender As Object, e As EventArgs) Handles MyBase.Load
