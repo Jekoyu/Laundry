@@ -1,4 +1,6 @@
 ﻿Public Class Login
+    Dim Pwd
+    Dim otl
     Sub SwitchPanel(ByVal p As Form)
         Form1.Panel1.Controls.Clear()
         p.TopLevel = False
@@ -11,9 +13,9 @@
     End Sub
     Sub Login()
 
-        q = "select * from tb_user where username ='" & TbUsername.Text & "' and password = '" & TbPassword.Text & "' "
+        Pwd = Md5(TbPassword.Text)
+        q = "select * from tb_user where username ='" & TbUsername.Text & "' and password = '" & Pwd & "' "
         Cari(q)
-
         If dr.HasRows Then
             role = dr.Item("role")
             If role = 1 Then
@@ -23,9 +25,17 @@
             Else
                 Master.Pemilik()
             End If
+            otl = dr.Item("id_outlet")
+            q = "select * from tb_outlet where id_outlet = '" & otl & "'"
+            Cari(q)
+            If dr.HasRows Then
+                Master.Label1.Text = dr.Item("nama")
+                Master.Label1.Text = Master.Label1.Text.ToUpper()
+            End If
             Form1.Visible = False
             Master.Show()
             Dashboard.LblNama.Text = dr.Item("nama")
+            Logout.LblNama.Text = dr.Item("nama")
         Else
             MsgBox("Username/Email dan password Yang Anda Masukkan Salah")
             Kosongkan()
@@ -74,7 +84,7 @@
 
     Private Sub TbPassword_Leave(sender As Object, e As EventArgs) Handles TbPassword.Leave
         If TbPassword.Text = "" Then
-            TbPassword.PasswordChar = ""
+            TbPassword.PasswordChar = "*"
             TbPassword.Text = "Password"
         End If
     End Sub

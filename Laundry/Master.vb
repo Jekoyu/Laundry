@@ -9,12 +9,25 @@
         BtnManageUser.Visible = True
         BtnHome.Visible = True
         BtnManageBarang.Visible = True
+        ManageUser.Visible = True
+        Belanja.Visible = True
+        Laporan.Visible = True
+        BtnLogout.Visible = True
+
     End Sub
     Sub Kasir()
+        BtnHome.Visible = True
         BtnManageBarang.Visible = True
+        ManageUser.Visible = True
+        Belanja.Visible = True
+        Laporan.Visible = True
+        BtnLogout.Visible = True
+
     End Sub
     Sub Pemilik()
-        BtnBelanja.Visible = True
+        BtnHome.Visible = True
+        Laporan.Visible = True
+        BtnLogout.Visible = True
     End Sub
     Private Sub Master_Load(sender As Object, e As EventArgs) Handles Me.Load
         SwitchPanel(Dashboard)
@@ -32,5 +45,25 @@
         WindowState = WindowState.Minimized
     End Sub
 
+    Private Sub Logout_Click(sender As Object, e As EventArgs) Handles BtnLogout.Click
+        SwitchPanel(Logout)
+    End Sub
 
+    Private Sub ManageUser_Click(sender As Object, e As EventArgs) Handles ManageUser.Click
+        SwitchPanel(Manage_User)
+        Manage_User.Kosongkan()
+    End Sub
+
+    Private Sub BtnManageUser_Click(sender As Object, e As EventArgs) Handles BtnManageUser.Click
+        SwitchPanel(ManageOutlet)
+        ManageOutlet.Kosongkan()
+    End Sub
+
+    Private Sub BtnHome_Click(sender As Object, e As EventArgs) Handles BtnHome.Click
+        SwitchPanel(Dashboard)
+    End Sub
+
+    Private Sub BtnManageBarang_Click(sender As Object, e As EventArgs) Handles BtnManageBarang.Click
+
+    End Sub
 End Class

@@ -99,6 +99,30 @@
     <Compile Include="Login.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Logout.Designer.vb">
+      <DependentUpon>Logout.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Logout.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Manage User.Designer.vb">
+      <DependentUpon>Manage User.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Manage User.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ManageOutlet.Designer.vb">
+      <DependentUpon>ManageOutlet.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ManageOutlet.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ManageProduk.Designer.vb">
+      <DependentUpon>ManageProduk.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ManageProduk.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Master.Designer.vb">
       <DependentUpon>Master.vb</DependentUpon>
     </Compile>
@@ -139,6 +163,18 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Logout.resx">
+      <DependentUpon>Logout.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Manage User.resx">
+      <DependentUpon>Manage User.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ManageOutlet.resx">
+      <DependentUpon>ManageOutlet.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ManageProduk.resx">
+      <DependentUpon>ManageProduk.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Master.resx">
       <DependentUpon>Master.vb</DependentUpon>

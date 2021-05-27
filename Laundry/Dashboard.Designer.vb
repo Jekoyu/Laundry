@@ -41,7 +41,8 @@ Partial Class Dashboard
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(293, 256)
+        Me.Label2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.Label2.Location = New System.Drawing.Point(299, 262)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(178, 46)
         Me.Label2.TabIndex = 1
@@ -50,7 +51,8 @@ Partial Class Dashboard
         'LblNama
         '
         Me.LblNama.AutoSize = True
-        Me.LblNama.Location = New System.Drawing.Point(462, 256)
+        Me.LblNama.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.LblNama.Location = New System.Drawing.Point(468, 262)
         Me.LblNama.Name = "LblNama"
         Me.LblNama.Size = New System.Drawing.Size(75, 46)
         Me.LblNama.TabIndex = 2
