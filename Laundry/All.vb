@@ -1,5 +1,7 @@
-﻿
+﻿Imports System.IO
+Imports System.Security.Cryptography
 Imports System.Data.SqlClient
+
 Module All
     Public cmd As SqlCommand
     Public dr As SqlDataReader
@@ -8,6 +10,27 @@ Module All
     Public conn As SqlConnection
     Public q As String
     Public role As String
+
+    Public Function Md5(ByVal Pwd As String) As String
+        Dim x As New MD5CryptoServiceProvider
+        Dim bs As Byte() = System.Text.Encoding.UTF8.GetBytes(Pwd)
+        bs = x.ComputeHash(bs)
+        Dim s As New System.Text.StringBuilder()
+        For Each b As Byte In bs
+            s.Append(b.ToString("x2").ToLower())
+        Next
+        Return s.ToString
+    End Function
+    Public Function Md5de(ByVal Pwd As String) As String
+        Dim x As New MD5CryptoServiceProvider
+        Dim bs As Byte() = System.Text.Encoding.UTF8.GetBytes(Pwd)
+        bs = x.ComputeHash(bs)
+        Dim s As New System.Text.StringBuilder()
+        For Each b As Byte In bs
+            s.Append(b.ToString("x2").ToUpper())
+        Next
+        Return s.ToString
+    End Function
 
     Public Sub koneksi()
         Try
