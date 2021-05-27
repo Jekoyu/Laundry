@@ -7,7 +7,8 @@
     End Sub
     Sub Admin()
         BtnManageUser.Visible = True
-
+        BtnHome.Visible = True
+        BtnManageBarang.Visible = True
     End Sub
     Sub Kasir()
         BtnManageBarang.Visible = True
@@ -23,7 +24,13 @@
         Dim s As String
         s = MsgBox("Yakin tutup?", vbYesNo)
         If vbYes Then
-            Me.Close()
+            Application.Exit()
         End If
     End Sub
+
+    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
+        WindowState = WindowState.Minimized
+    End Sub
+
+
 End Class
