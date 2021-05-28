@@ -10,7 +10,7 @@ Module All
     Public conn As SqlConnection
     Public q As String
     Public role As String
-    Public clm, tbl As String
+    Public clm, tbl, data As String
 
     Public Function Md5(ByVal Pwd As String) As String
         Dim x As New MD5CryptoServiceProvider
@@ -22,7 +22,19 @@ Module All
         Next
         Return s.ToString
     End Function
-
+    Public Function ComboBox(ByVal q As String, CB As ComboBox, data As String)
+        Try
+            koneksi()
+            cmd = New SqlCommand(q, conn)
+            dr = cmd.ExecuteReader
+            While dr.Read
+                CB.Items.Add(data)
+            End While
+        Catch ex As Exception
+            MsgBox(ex.Message)
+        End Try
+        Return True
+    End Function
 
     Public Sub koneksi()
         Try

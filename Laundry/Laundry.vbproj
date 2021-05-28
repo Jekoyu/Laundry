@@ -93,6 +93,12 @@
     <Compile Include="Form2.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Laporan.Designer.vb">
+      <DependentUpon>Laporan.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Laporan.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Login.Designer.vb">
       <DependentUpon>Login.vb</DependentUpon>
     </Compile>
@@ -144,10 +150,22 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <Compile Include="Profile.Designer.vb">
+      <DependentUpon>Profile.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Profile.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Reg.Designer.vb">
       <DependentUpon>Reg.vb</DependentUpon>
     </Compile>
     <Compile Include="Reg.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Transaksi.Designer.vb">
+      <DependentUpon>Transaksi.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Transaksi.vb">
       <SubType>Form</SubType>
     </Compile>
   </ItemGroup>
@@ -160,6 +178,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Form2.resx">
       <DependentUpon>Form2.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Laporan.resx">
+      <DependentUpon>Laporan.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.vb</DependentUpon>
@@ -185,8 +206,14 @@
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
     </EmbeddedResource>
+    <EmbeddedResource Include="Profile.resx">
+      <DependentUpon>Profile.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Reg.resx">
       <DependentUpon>Reg.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Transaksi.resx">
+      <DependentUpon>Transaksi.vb</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

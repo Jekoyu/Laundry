@@ -64,6 +64,7 @@
     End Sub
 
     Private Sub BtnManageBarang_Click(sender As Object, e As EventArgs) Handles BtnManageBarang.Click
-
+        SwitchPanel(ManageProduk)
+        ManageProduk.Kosongkan()
     End Sub
 End Class
